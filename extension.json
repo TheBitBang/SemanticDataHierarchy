@@ -1,0 +1,55 @@
+{
+	"name": "Semantic Data Hierarchy",
+	"version": "0.0.0",
+	"author": [
+		"Xavier Atero"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:SemanticDataHierarchy",
+	"descriptionmsg": "smmgmt-desc",
+	"license-name": "MIT",
+	"type": "other",
+	"AutoloadClasses": {
+		"SemanticDataHierarchyHooks": "SemanticDataHierarchy.hooks.php",
+		"SpecialHelloWorld": "specials/SpecialHelloWorld.php"
+	},
+	"config": {
+		"SemanticDataHierarchyEnableFoo": true
+	},
+	"ExtensionMessagesFiles": {
+		"SemanticDataHierarchyAlias": "SemanticDataHierarchy.i18n.alias.php"
+	},
+	"Hooks": {
+		"NameOfHook": [
+			"SemanticDataHierarchyHooks::onNameOfHook"
+		],
+		"SMW::Property::initProperties": [
+			"SemanticDataHierarchyHooks::initProperties"
+		]
+	},
+	"MessagesDirs": {
+		"SemanticDataHierarchy": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"ext.SemanticDataHierarchy.foo": {
+			"scripts": [
+				"modules/ext.SemanticDataHierarchy.js",
+				"modules/ext.SemanticDataHierarchy.foo.js"
+			],
+			"styles": [
+				"modules/ext.SemanticDataHierarchy.foo.css"
+			],
+			"messages": [],
+			"dependencies": []
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "SemanticDataHierarchy"
+	},
+	"SpecialPages": {
+		"HelloWorld": "SpecialHelloWorld"
+	},
+	"manifest_version": 1
+}
